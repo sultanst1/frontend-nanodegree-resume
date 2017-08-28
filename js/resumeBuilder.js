@@ -4,12 +4,13 @@ var bio = {
   contacts : {
     mobile : "966-592903330",
     email : "ss-tamimi-ss@hotmail.com",
+    github: "https://github.com/sultanst1",
     twitter : "https://twitter.com/sultan_st_",
     location : "Riyadh"
   },
   welcomeMessage : "Welcome to my first Javascript page",
   skills : ["Java", "php", "frontend"],
-  bioPic : "images/Image11.png" 
+  biopic : "images/Image11.png" 
 };
 
 bio.display = function() {
@@ -24,13 +25,18 @@ bio.display = function() {
   var formattedEmail = addHyperLink(HTMLemail,bio.contacts.email,bio.contacts.email);
     $("#topContacts").append(formattedEmail);
     $("#footerContacts").append(formattedEmail);
+
+var formattedGithub = addHyperLink(HTMLgithub,bio.contacts.github,bio.contacts.github);
+    $("#topContacts").append(formattedGithub);
+    $("#footerContacts").append(formattedGithub);
+
     var formattedTwitter = addHyperLink(HTMLtwitter,bio.contacts.twitter, "@sultan_st_");
     $("#topContacts").append(formattedTwitter);
     $("#footerContacts").append(formattedTwitter);
     var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
     $("#topContacts").append(formattedLocation);
     $("#footerContacts").append(formattedLocation);
-    var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic);
+    var formattedBioPic = HTMLbioPic.replace("%data%", bio.biopic);
     $("#header").append(formattedBioPic);
 
   var formattedWelcomeMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
@@ -52,15 +58,17 @@ var education = {
     {
       name : "Zaid Bin Thabit School",
       location : "Riyadh",
+      majors : ["none"],
       degree : "Primary School",
-      dates : 2001,
+      dates : "2001",
       url : ""
     },
     {
       name : "Al Shifa Secondary School",
       location : "Riyadh",
       degree : "Secondary School",
-      dates : 2010,
+      majors : ["none"],
+      dates : "2010",
       url : ""
     },
     {
@@ -68,7 +76,7 @@ var education = {
       location : "Riyadh",
       degree : " University",
       majors : ["Data science"],
-      dates : 2015,
+      dates : "2015",
       url : "http://ksu.edu.sa/"
     }
     
@@ -77,7 +85,7 @@ var education = {
     {
       title : "frontend",
       school : "udacity",
-      dates : 2017,
+      dates : "2017",
       url : "https://www.udacity.com/"
     },
     
@@ -132,12 +140,14 @@ var work = {
   jobs: [
     {
       employer : "Marketing experience",
+      location : "Riyadh",
       title : "Supervisor of food products",
-      dates : " 2015",
+      dates : "2015",
       description : "Supervising the food shelves and supervising staff"
     },
     {
       employer : "Organizing a government ceremony",
+      location : "Riyadh",
       title : "Organizing the vote for the Olympics in the Kingdom",
       dates : "2015",
       description : "Organizing the voting for the candidates of the Sports Union"
@@ -166,14 +176,14 @@ var projects = {
   projects: [
     {
       title: "HTML page ",
-      datesWorked: "2017",
+      dates: "2017",
       description: "First project in udacity",
       images: ["images/Untitled.jpg"]
       
     },
     {
       title: "build a portfolio site",
-      datesWorked: "2017",
+      dates: "2017",
       description: "second project in udacity",
     images: ["images/ramdisk-crop_172013814_qNpKn.jpg"]
     },
